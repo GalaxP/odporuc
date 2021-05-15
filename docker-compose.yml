@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  odporucui:
+    image: ${DOCKER_REGISTRY-}odporucui
+    build:
+      context: .
+      dockerfile: odporuc.UI/Dockerfile
+
+  odporucapi:
+    image: ${DOCKER_REGISTRY-}odporucapi
+    build:
+      context: .
+      dockerfile: odporucAPI/Dockerfile
+

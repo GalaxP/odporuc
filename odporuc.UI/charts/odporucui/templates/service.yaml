@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "odporucui.fullname" . }}
+  labels:
+    app: {{ template "odporucui.name" . }}
+    chart: {{ template "odporucui.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "odporucui.name" . }}
+    release: {{ .Release.Name }}
