@@ -2,7 +2,8 @@ node('jenkins-slave') {
     
      stage('test pipeline') {
         sh(script: """
-            echo "hello"
+           pwd
+           echo "hello"
            git clone https://github.com/marcel-dempers/docker-development-youtube-series.git
            cd ./docker-development-youtube-series/golang
            
