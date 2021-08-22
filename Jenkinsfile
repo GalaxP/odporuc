@@ -4,15 +4,17 @@ node('jenkins-slave') {
         sh(script: """
             echo "hello"
             
-            git clone https://github.com/GalaxP/odporuc.git
+            git clone https://github.com/GalaxP/odporuc/tree/master/odporuc.UI
             
-            cd ./odporuc
+            cd ./odporuc/odporuc.UI
             
             ls
             
             pwd
             
             docker build . -t odporuc-ui
+            
+        
             
             docker images
         """)
