@@ -4,7 +4,7 @@ node('jenkins-slave') {
         sh(script: """
             echo "hello"
             
-            git clone https://github.com/GalaxP/odporuc/tree/master/odporuc.UI
+            git clone https://github.com/GalaxP/odporuc.git
             
             cd ./odporuc/odporuc.UI
             
