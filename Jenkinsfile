@@ -11,6 +11,10 @@ node('jenkins-slave') {
             ls
             
             pwd
+            
+            docker build . -t odporuc-ui
+            
+            docker images
         """)
     }
 }
