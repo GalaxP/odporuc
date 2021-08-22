@@ -9,6 +9,8 @@ node('jenkins-slave') {
             cd ./odporuc
             
             ls
+            
+            pwd
         """)
     }
 }
